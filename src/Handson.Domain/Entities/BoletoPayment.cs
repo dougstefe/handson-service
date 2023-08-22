@@ -8,7 +8,7 @@
             ControlNumber = controlNumber;
         }
 
-        public string BarCode { get; set; }
-        public string ControlNumber { get; set; }
+        public string BarCode { get; private set; }
+        public string ControlNumber { get; private set; }
     }
 }

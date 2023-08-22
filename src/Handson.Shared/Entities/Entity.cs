@@ -7,7 +7,8 @@
             Id = new Guid();
         }
 
-        public Guid Id { get; set; }
+        public Guid Id { get; init; }
+
         public DateTime? CreatedAt { get; private set; }
 
         public DateTime? ModifiedAt { get; private set; }

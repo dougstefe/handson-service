@@ -16,10 +16,10 @@ namespace Handson.Domain.Entities
             _subscriptions = new List<Subscription>();
         }
 
-        public DocumentNumber DocumentNumber { get; set; }
-        public Email Email { get; set; }
-        public Name Name { get; set; }
-        public Address Address { get; set; }
+        public DocumentNumber DocumentNumber { get; private set; }
+        public Email Email { get; private set; }
+        public Name Name { get; private set; }
+        public Address Address { get; private set; }
 
         public IReadOnlyCollection<Subscription> Subscriptions => _subscriptions;
 

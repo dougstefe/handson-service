@@ -1,4 +1,4 @@
-﻿using Handson.Core.DomainObjects;
+﻿using Handson.Domain.ValueObjects;
 
 namespace Handson.Domain.Entities
 {
@@ -10,7 +10,7 @@ namespace Handson.Domain.Entities
             Number = number;
         }
 
-        public Name HolderName { get; set; }
-        public string Number { get; set; }
+        public Name HolderName { get; private set; }
+        public string Number { get; private set; }
     }
 }

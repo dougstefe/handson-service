@@ -10,9 +10,9 @@ namespace Handson.Domain.Entities
         }
 
         public DateTime? PaidAt { get; private set; }
-        public bool IsPaid{ get; private set; }
-        public decimal Total { get; set; }
-        public decimal? TotalPaid { get; set; }
+        public bool IsPaid { get; private set; }
+        public decimal Total { get; private set; }
+        public decimal? TotalPaid { get; private set; }
 
         public void Pay(decimal totalPaid)
         {
