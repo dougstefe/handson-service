@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Handson.Shared.Entities;
 
 namespace Handson.Domain.Entities
 {
-    internal class Lesson
+    public class Lesson : Entity
     {
+        public Lesson(string name, string description, int order, int durationInSeconds, Course course)
+        {
+            Name = name;
+            Description = description;
+            Order = order;
+            DurationInSeconds = durationInSeconds;
+            Course = course;
+        }
+
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public int Order { get; private set; }
+        public int DurationInSeconds { get; private set; }
+        public Course Course { get; private set; }
     }
 }

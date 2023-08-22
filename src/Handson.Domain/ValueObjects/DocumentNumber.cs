@@ -1,6 +1,6 @@
 ﻿using Handson.Shared.ValueObjects;
 
-namespace Handson.Core.DomainObjects
+namespace Handson.Domain.ValueObjects
 {
     public class DocumentNumber : ValueObject
     {
