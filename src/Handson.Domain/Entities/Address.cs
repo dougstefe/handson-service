@@ -1,11 +1,13 @@
-﻿using Handson.Shared.ValueObjects;
+﻿using Handson.Domain.Enums;
+using Handson.Shared.Entities;
 
-namespace Handson.Domain.ValueObjects
+namespace Handson.Domain.Entities
 {
-    public class Address : ValueObject
+    public class Address : Entity
     {
-        public Address(string street, string complement, string district, string city, string fU, string zipCode)
+        public Address(AddressType type, string street, string complement, string district, string city, string fU, string zipCode)
         {
+            Type = type;
             Street = street;
             Complement = complement;
             District = district;
@@ -13,12 +15,15 @@ namespace Handson.Domain.ValueObjects
             FU = fU;
             ZipCode = zipCode;
         }
-
+        public AddressType Type { get; set; }
         public string Street { get; private set; }
         public string Complement { get; private set; }
         public string District { get; private set; }
         public string City { get; private set; }
         public string FU { get; private set; }
         public string ZipCode { get; private set; }
+
+        public Student Student { get; private set; }
+        public Guid StudentId { get; private set; }
     }
 }

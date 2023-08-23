@@ -5,6 +5,7 @@ namespace Handson.Domain.Entities
 {
     public class Student : Entity
     {
+        private List<Address> _addresses;
         private List<Subscription> _subscriptions;
 
         public Student(DocumentNumber documentNumber, Email email, Name name, Address address)
@@ -12,14 +13,14 @@ namespace Handson.Domain.Entities
             DocumentNumber = documentNumber;
             Email = email;
             Name = name;
-            Address = address;
             _subscriptions = new List<Subscription>();
+            _addresses = new List<Address>();
         }
 
         public DocumentNumber DocumentNumber { get; private set; }
         public Email Email { get; private set; }
         public Name Name { get; private set; }
-        public Address Address { get; private set; }
+        public IReadOnlyCollection<Address> Addresses => _addresses;
 
         public IReadOnlyCollection<Subscription> Subscriptions => _subscriptions;
 
@@ -30,6 +31,12 @@ namespace Handson.Domain.Entities
                 subscription.Disable();
             }
             _subscriptions.Add(newSubscription);
+        }
+
+        public void AddAddress(Address newAddress)
+        {
+            _addresses.RemoveAll(x => x.Type == newAddress.Type);
+            _addresses.Add(newAddress);
         }
 
     }

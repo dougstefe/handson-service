@@ -18,5 +18,6 @@ namespace Handson.Domain.Entities
         public int Order { get; private set; }
         public int DurationInSeconds { get; private set; }
         public Course Course { get; private set; }
+        public Guid CourseId { get; set; }
     }
 }
