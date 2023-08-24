@@ -9,6 +9,8 @@ namespace Handson.Domain.ValueObjects
             Address = address;
         }
 
-        public string Address { get; init; }
+        public string Address { get; private set; }
+
+        public override string ToString() => Address;
     }
 }

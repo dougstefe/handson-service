@@ -4,9 +4,9 @@ namespace Handson.Domain.Repositories
 {
     public interface ICourseRepository
     {
-        Task Add(Course course);
-        Task Update(Course course);
-        Task FindById(Guid id);
-        Task FindByName(string name);
+        void Add(Course course);
+        void Update(Course course);
+        Task<Course?> FindById(Guid id);
+        Task<Course?> FindByName(string name);
     }
 }
