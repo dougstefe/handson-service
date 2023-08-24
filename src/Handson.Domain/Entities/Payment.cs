@@ -1,4 +1,5 @@
 ﻿using Handson.Domain.Enums;
+using Handson.Domain.Extensions;
 using Handson.Shared.Entities;
 
 namespace Handson.Domain.Entities
@@ -9,6 +10,8 @@ namespace Handson.Domain.Entities
         {
             Method = method;
             Total = total;
+
+            this.ThrowIfInvalid();
         }
 
         public DateTime? PaidAt { get; private set; }

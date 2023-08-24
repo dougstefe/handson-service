@@ -1,4 +1,5 @@
 ﻿using Handson.Domain.Enums;
+using Handson.Domain.Extensions;
 using Handson.Shared.Entities;
 
 namespace Handson.Domain.Entities
@@ -14,6 +15,8 @@ namespace Handson.Domain.Entities
             City = city;
             FU = fU;
             ZipCode = zipCode;
+
+            this.ThrowIfInvalid();
         }
         public AddressType Type { get; set; }
         public string Street { get; private set; }

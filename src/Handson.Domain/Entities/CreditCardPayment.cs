@@ -1,4 +1,5 @@
 ﻿using Handson.Domain.Enums;
+using Handson.Domain.Extensions;
 using Handson.Domain.ValueObjects;
 
 namespace Handson.Domain.Entities
@@ -9,6 +10,8 @@ namespace Handson.Domain.Entities
         {
             HolderName = holderName;
             Number = number;
+
+            this.ThrowIfInvalid();
         }
 
         public Name HolderName { get; private set; }

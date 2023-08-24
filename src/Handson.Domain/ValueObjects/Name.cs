@@ -8,9 +8,12 @@ namespace Handson.Domain.ValueObjects
         {
             FirstName = firstName;
             LastName = lastName;
+
         }
 
         public string FirstName { get; init; }
         public string LastName { get; init; }
+
+        public override string ToString() => $"{FirstName} {LastName}";
     }
 }

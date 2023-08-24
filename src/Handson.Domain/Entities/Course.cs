@@ -1,4 +1,5 @@
-﻿using Handson.Shared.Entities;
+﻿using Handson.Domain.Extensions;
+using Handson.Shared.Entities;
 
 namespace Handson.Domain.Entities
 {
@@ -14,6 +15,8 @@ namespace Handson.Domain.Entities
             Description = description;
             Tags = tags;
             _lessons = new List<Lesson>();
+
+            this.ThrowIfInvalid();
         }
 
         public string Name { get; private set; }

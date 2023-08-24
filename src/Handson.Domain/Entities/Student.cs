@@ -8,7 +8,7 @@ namespace Handson.Domain.Entities
         private List<Address> _addresses;
         private List<Subscription> _subscriptions;
 
-        public Student(DocumentNumber documentNumber, Email email, Name name, Address address)
+        public Student(DocumentNumber documentNumber, Email email, Name name)
         {
             DocumentNumber = documentNumber;
             Email = email;

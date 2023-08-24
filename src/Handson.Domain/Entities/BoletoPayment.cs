@@ -1,4 +1,5 @@
 ﻿using Handson.Domain.Enums;
+using Handson.Domain.Extensions;
 
 namespace Handson.Domain.Entities
 {
@@ -8,6 +9,8 @@ namespace Handson.Domain.Entities
         {
             BarCode = barCode;
             ControlNumber = controlNumber;
+
+            this.ThrowIfInvalid();
         }
 
         public string BarCode { get; private set; }
